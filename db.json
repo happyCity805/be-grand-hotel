@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1750218777199,
+      "email": "sholikul@gmail.com",
+      "password": "$2b$10$itf4bd8O5TaBeu3bV6a5weqyKBDI.naPKAiiHULJaP2IF8aPEBxgy"
+    },
+    {
+      "id": 1750221229856,
+      "email": "alfito@gmail.com",
+      "password": "$2b$10$P1XMTFknKes.Xwne7eFsI.LKl1LOP02eWlE2Xp/HOyosIM2.BlFqK"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "1",
+      "name": "Hotel Mawar",
+      "price": 300000
+    }
+  ],
+  "bookings": []
+}
