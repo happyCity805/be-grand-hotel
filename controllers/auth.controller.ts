@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { jsonApi } from '../../utils/jsonServer';
+import { jsonApi } from '../utils/jsonServer';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 

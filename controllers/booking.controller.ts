@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { jsonApi } from '../../utils/jsonServer';
-import { JwtUserPayload } from '../../types/user';
+import { jsonApi } from '../utils/jsonServer';
+import { JwtUserPayload } from '../types/user';
 
 interface AuthRequest extends Request {
   user?: JwtUserPayload;
