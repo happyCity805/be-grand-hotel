@@ -4,10 +4,14 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
 import bookingRoutes from './routes/booking';
 import paymentRoutes from './routes/payment';
+import jsonServer from 'json-server';
+
+const jsonRouter = jsonServer.router('db.json');
 
 dotenv.config();
 
 const app = express();
+app.use('/mock', jsonRouter);
 app.use(cors());
 app.use(express.json());
 
