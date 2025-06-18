@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import serverless from 'serverless-http';
 
 import authRoutes from './routes/auth';
 import bookingRoutes from './routes/booking';
@@ -26,9 +25,24 @@ app.use('/api/auth', authRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/payment', paymentRoutes);
 
-app.get('/api/debug', (req, res) => {
-  res.json({ message: 'API is running correctly!' });
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: 'Server is running',
+    data: null,
+  });
 });
+const port = 3030;
 
-// Export sebagai handler serverless
-export const handler = serverless(app);
+const init = async () => {
+  try {
+    app.listen(port, () => {
+      console.log(`Server is running on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+init();
+
+export default app;
