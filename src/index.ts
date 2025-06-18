@@ -26,5 +26,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/payment', paymentRoutes);
 
+app.get('/api/debug', (req, res) => {
+  res.json({ message: 'API is running correctly!' });
+});
+
 // Export sebagai handler serverless
 export const handler = serverless(app);
